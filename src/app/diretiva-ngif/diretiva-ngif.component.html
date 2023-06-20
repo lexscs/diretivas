@@ -7,9 +7,7 @@
 <div *ngIf="cursos.length === 0">
   Não existem cursos para serem listados.
 </div>
-<div *ngIf="mostrarCursos">
-  Lista de Cursos:
-</div>
+
 <div *ngIf="!mostrarCursos">
   Não existem cursos para serem listados.
 </div>
@@ -25,4 +23,19 @@
 </div>
 <div [hidden]="!mostrarCursos">
   Não existem cursos para serem listados.
+</div>
+
+
+<div *ngIf="mostrarCursos">
+
+</div>
+
+<template [ngIf]="mostrarCursos">
+  <div>
+    Lista de Cursos Aqui:
+  </div>
+</template>
+
+<div template="ngIf mostrarCursos">
+  Lista de Cursos Aqui:
 </div>
